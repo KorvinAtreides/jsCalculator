@@ -1,0 +1,17 @@
+.first{
+    text-align: center;
+}
+
+.tables{
+    display: none;
+}
+
+.forms{
+    display: none;
+}
+.calc_keys{
+    display: grid;
+    grid: repeat(4, min-content) / repeat(6, min-content);
+    grid-gap: 5px;
+}
+.calc_all {margin-bottom: 10px;}
