@@ -34,6 +34,7 @@ const allCalculation = {
   'n!': (firstOperand, secondOperand) => factorial(firstOperand)
 }; 
 function factorial(n) {
+  if (n==0) { return 1;  }
   if (n>0) {
     return (n != 1) ? n * factorial(n - 1) : 1;
   } else {return NaN}
@@ -79,11 +80,21 @@ function handleOperator(nextOperator) {
       calculator.firstOperand = inputValue;
   } else if (operator) {
       const currentValue = firstOperand || 0;
-      const result = allCalculation[operator](currentValue, inputValue);
-      calculator.displayValue = String(result);
-      calculator.firstOperand = result;
+      if (operator == '/' && inputValue == 0) {
+        const result = NaN;
+        calculator.displayValue = String(result);
+        calculator.firstOperand = result;
+        alert('Error: деление на 0'); 
+      } else if(operator == 'x^y' && inputValue == 0 && currentValue == 0){
+        const result = NaN;
+        calculator.displayValue = String(result);
+        calculator.firstOperand = result;
+        alert('Error: неопределённость вида 0 в степени 0'); 
+      }
+      else{const result = allCalculation[operator](currentValue, inputValue);
+        calculator.displayValue = String(result);
+        calculator.firstOperand = result;}
   }
-
   calculator.waitingForSecondOperand = true;
   if (first == true){calculator.waitingForSecondOperand = false;}
   calculator.operator = nextOperator;
