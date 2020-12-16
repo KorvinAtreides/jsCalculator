@@ -1,1 +1,1 @@
-https://lordkorvin.github.io/jsHome5/.
+:1234: https://lordkorvin.github.io/jsCalculator/.
