@@ -7,55 +7,93 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ES6</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
 </head>
 
 <body>
 
+<div class="container">
 
-  <div class="calculator">
+  <div class="flexbox1">
+    <div class="calculator">
 
-    <input type="text" class="calc_all" value="" disabled />
-    <select id="select1" >
-      <option value="1" selected>RAD</option> 
-      <option value="0.01745329251994329576923690768489">GRAD</option> 
-  </select>
+      <input type="text" class="calc_all" value="" disabled />
+      <select id="select1">
+        <option value="1" selected>RAD</option> 
+        <option value="0.01745329251994329576923690768489">GRAD</option> 
+      </select>
 
-    <div class="calc_keys">
-      <button type="button" class="operator trig" value="sin">sin</button>
-      <button type="button" class="operator" value="+">+</button>
-      <button type="button" class="operator" value="-">-</button>
-      <button type="button" value="1">1</button>
-      <button type="button" value="2">2</button>
-      <button type="button" value="3">3</button>
+      <div class="calc_keys">
+        <button type="button" class="operator trig" value="sin">sin</button>
+        <button type="button" class="operator" value="+">+</button>
+        <button type="button" class="operator" value="-">-</button>
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
 
-      <button type="button" class="operator trig" value="cos">cos</button>
-      <button type="button" class="operator" value="*">*</button>
-      <button type="button" class="operator" value="/">/</button>
-      <button type="button" value="4">4</button>
-      <button type="button" value="5">5</button>
-      <button type="button" value="6">6</button>
+        <button type="button" class="operator trig" value="cos">cos</button>
+        <button type="button" class="operator" value="*">*</button>
+        <button type="button" class="operator" value="/">/</button>
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
 
-      <button type="button" class="operator trig" value="tg">tg</button>
-      <button type="button" class="operator trig" value="sqrt">sqrt</button>
-      <button type="button" class="operator" value="x^y">x^y</button>
-      <button type="button" value="7">7</button>
-      <button type="button" value="8">8</button>
-      <button type="button" value="9">9</button>
+        <button type="button" class="operator trig" value="tg">tg</button>
+        <button type="button" class="operator trig" value="sqrt">&#8730</button>
+        <button type="button" class="operator" value="^">x^y</button>
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
 
-      <button type="button" class="operator trig" value="ctg">ctg</button>
-      <button type="button" class="operator" value="%">%</button>
-      <button type="button" class="equal-sign operator" value="=">=</button>
-      <button type="button" value="0">0</button>
-      <button type="button" value=".">.</button>
-      <button type="button" class="operator trig" value="n!">n!</button>
-      <button type="button" class="clear" value="0">C</button>
-      
-
+        <button type="button" class="operator trig" value="ctg">ctg</button>
+        <button type="button" class="equal-sign operator" value="=">=</button>
+        <button type="button" value="0">0</button>
+        <button type="button" value=".">.</button>
+        <button type="button" class="operator trig" value="n!">n!</button>
+        <button type="button" class="clear" value="0">C</button>
+      </div>
     </div>
+
+    <div class="notes">
+      <div class="title">
+        <div class="chevron">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+        
+        <h2>Notes</h2>
+      </div>
+      <div class="bodyNotes">
+        <div class="notesLanguage">
+          <span class="rus">RUS</span>
+          <span class="eng">ENG</span>
+        </div>
+        <div>
+          <p>
+            1) Кнопки квадратного корня, факториала и тригонометрических функций не требуют второго операнда; 
+            для выполнения нужно нажать равно или другую кнопку математического действия
+          </p>
+          <p>
+            2) Точность квадратного корня, деления и тригонометрических функций составляет 7 знаков;
+            точность сложения, вычитания и умножения определяется кол-вом значащих цифр
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
+  <div class="history">
+    <div class="title">
+      <h2>History of operations</h2>
+    </div>
+    <ul id="ulOfOperations">
+    </ul>
+  </div>
+
+</div>
 
   <script src="./script.js"></script>
+  <script src="fontawesome/js/all.js"></script>
 </body>
 
 </html>
