@@ -1,7 +1,7 @@
 It is a web calculator created using JavaScript and ES6 standarts. 
 
 Web version is available on Github Pages:
-https://lordkorvin.github.io/jsCalculator/.
+https://korvinatreides.github.io/jsCalculator/.
 
 There are some peculiarities of this app:
 
