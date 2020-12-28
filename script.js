@@ -4,10 +4,7 @@ const calculator = {
   waitingForSecondOperand: false,
   operator: null,
 };
-var val = select1.value; //RAD or GRAD
-document.getElementById("select1").addEventListener("change", function () {
-  val = this.value;
-});
+
 var first; //for trig functions
 
 //All Operators
@@ -38,13 +35,13 @@ const allCalculation = {
       Math.max(digitsCount(firstOperand), digitsCount(secondOperand))
     ),
   sin: (firstOperand, secondOperand) =>
-    truncated(Math.sin(firstOperand * Number(val))),
+    truncated(Math.sin(firstOperand * Number(select1.value))),
   cos: (firstOperand, secondOperand) =>
-    truncated(Math.cos(firstOperand * Number(val))),
+    truncated(Math.cos(firstOperand * Number(select1.value))),
   tg: (firstOperand, secondOperand) =>
-    truncated(Math.tan(firstOperand * Number(val))),
+    truncated(Math.tan(firstOperand * Number(select1.value))),
   ctg: (firstOperand, secondOperand) =>
-    truncated(1 / Math.tan(firstOperand * Number(val))),
+    truncated(1 / Math.tan(firstOperand * Number(select1.value))),
   sqrt: (firstOperand, secondOperand) => truncated(Math.sqrt(firstOperand)),
   "n!": (firstOperand, secondOperand) => factorial(firstOperand),
 };
@@ -233,7 +230,7 @@ function historyAdd(currentValue1, operator1, inputValue1, result1) {
     operator1 == "tg" ||
     operator1 == "ctg"
   ) {
-    if (val == 1) {
+    if (select1.value == 1) {
       ul.innerHTML +=
         `<li>` + operator1 + `(` + currentValue1 + `) = ` + result1 + `</li>`;
     } else {
