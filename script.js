@@ -231,32 +231,14 @@ function historyAdd(currentValue1, operator1, inputValue1, result1) {
     operator1 == "ctg"
   ) {
     if (select1.value == 1) {
-      ul.innerHTML +=
-        `<li>` + operator1 + `(` + currentValue1 + `) = ` + result1 + `</li>`;
+      ul.innerHTML += `<li>${operator1}(${currentValue1}) = ${result1}</li>`;
     } else {
-      ul.innerHTML +=
-        `<li>` +
-        operator1 +
-        `(` +
-        currentValue1 +
-        `&#176) = ` +
-        result1 +
-        `</li>`;
+      ul.innerHTML += `<li>${operator1}(${currentValue1}&#176) = ${result1}</li>`;
     }
   } else if (operator1 == "sqrt") {
     operator1 = "&#8730";
-    ul.innerHTML +=
-      `<li>` + operator1 + `(` + currentValue1 + `) = ` + result1 + `</li>`;
+    ul.innerHTML += `<li>${operator1}(${currentValue1}) = ${result1}</li>`;
   } else {
-    ul.innerHTML +=
-      `<li>` +
-      currentValue1 +
-      ` ` +
-      operator1 +
-      ` ` +
-      inputValue1 +
-      ` = ` +
-      result1 +
-      `</li>`;
+    ul.innerHTML += `<li>${currentValue1} ${operator1} ${inputValue1} = ${result1}</li>`;
   }
 }
